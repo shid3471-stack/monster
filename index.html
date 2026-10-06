@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<div class="right">
+  <h2>我的網站</h2>
+
+</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      color: #555;
+      margin: 0;
+    }
+
+    .menu {
+      float: left;
+      width: 20%;
+      text-align: center;
+      padding: 0 5px;
+    }
+
+    .menu a {
+      background-color: #e5e5e5;
+      padding: 8px;
+      margin-top: 7px;
+      display: block;
+      width: 100%;
+      color: black;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      background-color: #ccc;
+    }
+
+    .main {
+      float: left;
+      width: 60%;
+      padding: 0 20px;
+    }
+
+    .right {
+      background-color: #e5e5e5;
+      float: left;
+      width: 20%;
+      padding: 15px;
+      margin-top: 7px;
+      text-align: center;
+    }
+
+    .right img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .chart-box {
+      width: 100%;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .footer {
+      background-color: #e5e5e5;
+      text-align: center;
+      padding: 10px;
+      margin-top: 7px;
+      clear: both;
+    }
+
+    @media only screen and (max-width: 620px) {
+      .menu,
+      .main,
+      .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+
+   
+
+    
+      
+
+  
+
+<h2>統計圖表</h2>
+<div class="chart-box">
+  <canvas id="myChart"></canvas>
+</div>
+
+    
+
+      <img src="20260712_170723.jpg"
+           alt="W3Schools.com"
+           width="250"
+           height="142">
+		   <br><br>
+		   <h2>YouTube影片</h2>
+
+<a href="https://www.youtube.com/watch?v=wlHwjkYpSr0" target="_blank">
+  點我觀看 YouTube 影片
+</a>
+<iframe width="100%" height="200"
+  src="https://www.youtube.com/embed/wlHwjkYpSr0"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © Copyright W3Schools.com
+  </div>
+
+  <script>
+    const xValues = [
+      "Italy",
+      "France",
+      "Spain",
+      "USA",
+      "Argentina"
+    ];
+
+    const yValues = [
+      55,
+      49,
+      44,
+      24,
+      15
+    ];
+
+    const barColors = [
+      "red",
+      "green",
+      "blue",
+      "orange",
+      "brown"
+    ];
+
+    const ctx = document.getElementById("myChart");
+
+    new Chart(ctx, {
+      type: "bar",
+
+      data: {
+        labels: xValues,
+
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          },
+
+          title: {
+            display: true,
+            text: "World Wine Production 2018",
+            font: {
+              size: 16
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
+```
